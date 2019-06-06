@@ -47,7 +47,7 @@ public class Products extends HttpServlet {
                 connection = (new DatabaseConnector()).getConnection();
                 Statement stmt=connection.createStatement();  
 
-                ResultSet rs=stmt.executeQuery("select * from products");  
+                ResultSet rs=stmt.executeQuery("select * from product");  
                 while(rs.next()) { 
                     name = rs.getString(2);
                     out.println(name);

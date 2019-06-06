@@ -58,11 +58,11 @@
 
         <table id="customers">
             <sql:setDataSource var = "snapshot" driver = "com.mysql.jdbc.Driver"
-                url = "jdbc:mysql://localhost:3306/inf124?useSSL=false&serverTimezone=UTC"
-                user = "root"  password = "Danio123"/>
+                url = "jdbc:mysql://localhost:3306/store?useSSL=false&serverTimezone=UTC"
+                user = "root"  password = "DmnstnofE3dctn"/>
 
              <sql:query dataSource = "${snapshot}" var = "result">
-                SELECT * from products;
+                SELECT * from product;
              </sql:query>
             <tr>
                 <th>Product Details</th>

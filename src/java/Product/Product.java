@@ -43,7 +43,7 @@ public class Product {
         try{
             Connection connection;
             connection = (new DatabaseConnector()).getConnection();
-            String query = "SELECT EXISTS(SELECT * FROM products WHERE pid = ? ) as checked";
+            String query = "SELECT EXISTS(SELECT * FROM product WHERE pid = ? ) as checked";
             PreparedStatement preparedStmt = connection.prepareStatement(query);
             preparedStmt.setInt(1, Integer.parseInt(itemid));
                     //here sonoo is database name, root is username and password  
@@ -71,7 +71,7 @@ public class Product {
                 connection = (new DatabaseConnector()).getConnection();
                 Statement stmt=connection.createStatement();    
                 //here sonoo is database name, root is username and password  
-                ResultSet rs=stmt.executeQuery("select * from products");  
+                ResultSet rs=stmt.executeQuery("select * from product");  
                 while(rs.next()) { 
                     JSONObject obj = new JSONObject();
                     obj.put("name", rs.getString("name"));
@@ -131,7 +131,7 @@ public class Product {
         try{
             Connection connection;
             connection = (new DatabaseConnector()).getConnection();
-            String query = "DELETE FROM products WHERE pid = ?";
+            String query = "DELETE FROM product WHERE pid = ?";
             PreparedStatement preparedStmt = connection.prepareStatement(query);
             preparedStmt.setString(1, itemid);
             preparedStmt.executeUpdate();
@@ -158,7 +158,7 @@ public class Product {
                 connection = (new DatabaseConnector()).getConnection();
                 Statement stmt=connection.createStatement();    
                 //here sonoo is database name, root is username and password  
-                ResultSet rs=stmt.executeQuery("select * from products where pid = " + itemid);  
+                ResultSet rs=stmt.executeQuery("select * from product where pid = " + itemid);  
                 while(rs.next()) { 
                     name = rs.getString("name");
                     image = rs.getString("image_url");
@@ -198,7 +198,7 @@ public class Product {
             try{
                 Connection connection;
                 connection = (new DatabaseConnector()).getConnection();
-                String query = "UPDATE products SET name = ?, image_url = ?, price_in_cents = ?, description = ? WHERE pid = ?;";
+                String query = "UPDATE product SET name = ?, image_url = ?, price_in_cents = ?, description = ? WHERE pid = ?;";
                 PreparedStatement preparedStmt = connection.prepareStatement(query);
                 preparedStmt.setString(1, name);
                 preparedStmt.setString(2, img);
