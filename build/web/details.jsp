@@ -1,6 +1,5 @@
-<!doctype html>
-
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en">    
 
 <head>
     <meta charset="utf-8">
@@ -44,7 +43,7 @@
         <p id='desc'>{{desc}}</p>
     </div>
     <div class="flex-container">
-        <button id='redirect-button' style='cursor:pointer' class="styledBtn" onclick="window.location='/HelloWorldApp/Basket?pid={{pid}}'">Add to cart</button>
+        <button id='redirect-button' style='cursor:pointer' class="styledBtn" >Add to cart</button>
     </div>
     <div class="flex-container footer" style="position:fixed;bottom:0;left:0;right:0;">
         <div>

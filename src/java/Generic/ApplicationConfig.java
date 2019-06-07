@@ -32,6 +32,6 @@ public class ApplicationConfig extends Application {
         resources.add(Generic.GenericResource.class);
         resources.add(Order.Order.class);
         resources.add(Product.Product.class);
+        resources.add(Basket.Basket.class);
     }
-    
 }

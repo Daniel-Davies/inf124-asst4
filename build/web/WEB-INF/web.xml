@@ -57,5 +57,21 @@
     <servlet-name>Summary</servlet-name>
     <url-pattern>/Summary</url-pattern>
    </servlet-mapping>
+  <servlet>
+    <servlet-name>Products</servlet-name>
+    <servlet-class>Products</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Products</servlet-name>
+    <url-pattern>/Products</url-pattern>
+   </servlet-mapping>
+  <servlet>
+    <servlet-name>Basket</servlet-name>
+    <servlet-class>basket.Basket</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Basket</servlet-name>
+    <url-pattern>/Basket</url-pattern>
+   </servlet-mapping>
 </web-app>
 

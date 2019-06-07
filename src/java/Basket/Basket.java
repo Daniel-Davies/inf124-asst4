@@ -3,25 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package Basket;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.util.ArrayList;
+import javax.servlet.annotation.*;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author davie
  */
-@WebServlet(urlPatterns = {"/Products"})
-public class Products extends HttpServlet {
+@WebServlet(urlPatterns = { "/Basket"})
+public class Basket extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,29 +33,26 @@ public class Products extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            try{  
-                String name = new String();
-                String image = new String();
-                String desc = new String();
-                String cost = new String();
-                 
-                Connection connection;
-                connection = (new DatabaseConnector()).getConnection();
-                Statement stmt=connection.createStatement();  
-
-                ResultSet rs=stmt.executeQuery("select * from product");  
-                while(rs.next()) { 
-                    name = rs.getString(2);
-                    out.println(name);
-                }
-                connection.close();  
-            }catch(Exception e){ 
-                response.getWriter().println(e);
-            }  
-        }
+        
+       response.setContentType("text/html;charset=UTF-8");
+       
+       HttpSession session = request.getSession();
+       
+       ArrayList<String> pids;
+       
+       if(null == session.getAttribute("pids")){
+           pids = new ArrayList<>();
+       } else{
+           pids = (ArrayList)session.getAttribute("pids");  
+       }
+             
+       pids.add(request.getParameter("pid"));
+       
+       session.setAttribute("pids", pids);
+       
+        //RequestDispatcher rd = request.getRequestDispatcher("/Basket");
+        //response.sendRedirect("/HelloWorldApp");
+        //rd.forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
