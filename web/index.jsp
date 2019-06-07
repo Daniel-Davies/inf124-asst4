@@ -21,6 +21,7 @@
         <meta name='description' content='My clothes store main page'>
         <link href='https://fonts.googleapis.com/css?family=Eczar:400,500' rel='stylesheet'>
         <link rel='stylesheet' href='styles.css'>
+        <script src='get_all_products.js'></script>
         <style>
             select {
                 height: 4vh;
@@ -57,6 +58,7 @@
     <div class="flex-container">
 
         <table id="customers">
+            <script>getAllProducts();</script>
             <sql:setDataSource var = "snapshot" driver = "com.mysql.jdbc.Driver"
                 url = "jdbc:mysql://localhost:3306/store?useSSL=false&serverTimezone=UTC"
                 user = "root"  password = "DmnstnofE3dctn"/>

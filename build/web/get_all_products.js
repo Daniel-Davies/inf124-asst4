@@ -10,21 +10,30 @@ function getAllProducts() {
             let tr = document.createElement('tr');
             let td1 = document.createElement('td');
             td1 = addName(td1, value.name);
+            /*
             td1 = addPrice(td1, value.price_in_cents);
             td1 = addId(td1, key);
             td1 = addDescription(td1, value.description);
             td1 = addColorOptions(td1);
+            */
             tr.append(td1);
+            /*
             let td2 = document.createElement('td');
             td2.classList.add('cover')
             td2 = addImage(td2, value.image_url);
             tr.append(td2);
+            */
             table.append(tr);
         });
     };
-    const endpoint = 'http://centaurus-13.ics.uci.edu:1025/webservices/v1/api/product';
-    xhr.open('GET', endpoint);
+    xhr.open(
+            'GET', 
+            'http://centaurus-13.ics.uci.edu:1025/webservices/v1/api/product');
+    xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+    xhr.setRequestHeader('Vary', 'Origin')
+    
     xhr.send();
+    
 }
 
 function addName(td, name) {
