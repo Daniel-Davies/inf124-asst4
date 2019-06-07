@@ -3,9 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/willkhaine/Documents/dev/rcs/apache-tomcat-9.0.20/webapps/inf124-asst4/src/java/Generic/ApplicationConfig.java</file>
+            <file>file:/Users/willkhaine/Documents/dev/rcs/apache-tomcat-9.0.20/webapps/inf124-asst4/web/summary.jsp</file>
             <file>file:/Users/willkhaine/Documents/dev/rcs/apache-tomcat-9.0.20/webapps/inf124-asst4/web/index.jsp</file>
-            <file>file:/Users/willkhaine/Documents/dev/rcs/apache-tomcat-9.0.20/webapps/inf124-asst4/web/get_all_products.js</file>
+            <file>file:/Users/willkhaine/Documents/dev/rcs/apache-tomcat-9.0.20/webapps/inf124-asst4/web/get_basket.js.js</file>
         </group>
     </open-files>
 </project-private>

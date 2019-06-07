@@ -11,7 +11,6 @@
 <%@ page import = "java.io.*,java.util.*,java.sql.*"%>
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix = "sql"%>
 
 <!DOCTYPE html>
 <html>
@@ -39,8 +38,8 @@
         <h3 class='title' style='width: 40vh; line-height: 1em;'>Stryeet Wear</br>
         <span style='font-size: 15px;'>by Daniel Davies and William Khaine</span></h3>
         <ul>
-            <li><a href='./about.html' class='visiting'>About</a></li>
-            <li><a href='./index.php'>Products</a></li>
+            <li><a href='./' class='visiting'>Products</a></li>
+            <li><a href='./Order'>Basket</a></li>
         </ul>
     </header>
     <div class="flex-container">
@@ -56,49 +55,12 @@
     </div>
 
     <div class="flex-container">
-
         <table id="customers">
-            <script>getAllProducts();</script>
-            <sql:setDataSource var = "snapshot" driver = "com.mysql.jdbc.Driver"
-                url = "jdbc:mysql://localhost:3306/store?useSSL=false&serverTimezone=UTC"
-                user = "root"  password = "DmnstnofE3dctn"/>
-
-             <sql:query dataSource = "${snapshot}" var = "result">
-                SELECT * from product;
-             </sql:query>
             <tr>
                 <th>Product Details</th>
                 <th>Product Image</th>
             </tr>
-            <c:forEach var = "row" items = "${result.rows}">
-                <tr>
-                    <td>
-                       <div class='flex-container'>
-                          <h1 class='namebox' style='margin: 0%;'><c:out value = "${row.name}"/></h1>
-                       </div>
-                       <div class='flex-container' style='margin: 0%'>
-                          <h3 class='namebox' style='margin: 0%'><c:out value = "${row.price_in_cents}"/></h3>
-                       </div>
-                       <div style='display: flex; justify-content: start;'>
-                          <p><b><em>Product ID</em></b>:<u class='idbox'><c:out value = "${row.pid}"/></u></p>
-                       </div>
-                       <div style='display: flex; justify-content: start;'>
-                           <p><c:out value = "${row.description}"/></p>
-                       </div>
-                       <div class='flex-container'>
-                          <h2>Select your color:</h2>
-                       </div>
-                       <div class='flex-container'>
-                          <select onclick='event.stopPropagation();'>
-                             <option value='Red'>Red</option>
-                             <option value='White'>White</option>
-                             <option value='Blue'>Blue</option>
-                          </select>
-                       </div>
-                    </td>
-                    <td class='cover'><img class='cover' src=<c:out value = "${row.image_url}"/> /></td>
-                 </tr>
-             </c:forEach>
+            <script>getProductsFake();</script>
         </table>
     </div>
     <div class="flex-container footer">
