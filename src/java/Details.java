@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.ServletContext;
-import java.sql.*;  
 import java.text.NumberFormat;
 import java.util.*;
 
@@ -25,8 +24,6 @@ import java.util.*;
  */
 @WebServlet(urlPatterns = {"/Details"})
 public class Details extends HttpServlet {
-
-   Connection connection;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
