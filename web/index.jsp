@@ -5,12 +5,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ page import = "java.text.NumberFormat,java.util.*,java.sql.*;"%>
-<%@ page import = "java.io.*,javax.servlet.http.*,javax.servlet.*;"%>
-<%@ page import = "javax.servlet.annotation.*,Generic.DatabaseConnector;"%>
-<%@ page import = "java.io.*,java.util.*,java.sql.*"%>
-<%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
 
 <!DOCTYPE html>
 <html>
@@ -20,7 +14,8 @@
         <meta name='description' content='My clothes store main page'>
         <link href='https://fonts.googleapis.com/css?family=Eczar:400,500' rel='stylesheet'>
         <link rel='stylesheet' href='styles.css'>
-        <script src='get_all_products.js'></script>
+        <script src='js/scripts.js'></script>
+        <script src='js/get_all_products.js'></script>
         <style>
             select {
                 height: 4vh;
@@ -60,7 +55,7 @@
                 <th>Product Details</th>
                 <th>Product Image</th>
             </tr>
-            <script>getProductsFake();</script>
+            <script>getAllProducts();</script>
         </table>
     </div>
     <div class="flex-container footer">
@@ -86,13 +81,6 @@
             </p>
         </div>
     </div>
-
-
-
-
-    <script src="scripts.js"></script>
-    <script>addRowHandlers()</script>
-
     </body>
     
 </html>

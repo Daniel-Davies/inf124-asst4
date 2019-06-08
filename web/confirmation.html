@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Clothes Store</title>
+    <meta name="description" content="My clothes store">
+    <link href="https://fonts.googleapis.com/css?family=Eczar:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src='js/get_confirmation_details.js'></script>
+    <script src='js/scripts.js'></script>    
+    <style>
+        .display-4 {
+            font-family: 'Segoe UI', 'Times New Roman', serif;
+            font-size: 4rem;
+        }
+    </style>
+</head>
+
+
+<body onload='get_confirmation_details();'>
+    <header class='header'>
+        <h3 class='title' style='width: 40vh; line-height: 1em;'>Stryeet Wear</br>
+            <span style='font-size: 15px !important;'>by Daniel Davies and William Khaine</span>
+        </h3>
+        <ul>
+            <li><a href='./' >Products</a></li>
+            <li><a href='./Order' class='visiting'>Basket</a></li>
+        </ul>
+    </header>
+    <div class="container" style="margin-bottom: 15vh;">
+        <div class="flex-container">
+            <p class="display-4" style="margin-bottom: 0;">Order Confirmation</p>
+        </div>
+        <div class="flex-container">
+            <h1 id='orderer-info' style="margin: 0;"> {{first_name}} {{last_name}} {{suffix}}, thank you for your order! It will be with you shortly</h1>
+        </div>
+        <div class="flex-container">
+            <h1 style="margin:0;">---------------------</h1>
+        </div>
+        <div class="flex-container">
+            <h1 style="margin:0;">Your summary is below</h1>
+        </div>
+        <div id='pid-container' class="flex-container" style='font-size:1.5rem; margin-bottom: 10vh;'>
+        </div>
+        <div class="flex-container">
+            <p id='address'>Delivery Address: {{address}}</p>
+        </div>
+        <div class="flex-container">
+            <p id='shipping'>Delivery Method: {{shipping}}</p>
+        </div>
+        <div class="flex-container">
+            <p id='last4card'>Card charged: **** **** **** {{last4card}}</p>
+        </div>
+    </div>
+    <div class="flex-container footer" style="position:fixed;bottom:0;left:0;right:0;">
+        <div>
+            <p>
+                <span>Phone Number</span>
+                <span>(949) 123-4567</span>
+            </p>
+        </div>
+        <div>
+            <p>
+                <span>Email</span>
+                <span>
+                    <a href='mailto:wkhaine@uci.edu'>stryeetwear@gmail.com</a>
+                </span>
+            </p>
+        </div>
+        <div>
+            <p>
+                <span>Address</span>
+                <span>1234 Fake Address Rd.</span>
+                <span>Irvine, CA 92321</span>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</html>
