@@ -1,5 +1,5 @@
 # inf124-asst4
-Daniel Davies - daviesdg - 32285633 William Khaine - wkhaine - 34989009
+Daniel Davies - daviesdg - 32285633 <br/> William Khaine - wkhaine - 34989009
 
 ## URL
 Please visit the following URL to look at the site:
@@ -8,7 +8,7 @@ http://centaurus-13.ics.uci.edu:1025/Store/
 
 ## DB
 User: root<br>
-Password: {TO FILL OUT}
+Password: inf124
 
 ## Meeting Requirements
 1. The index page is implemented as a JSP (in Store.war, `web/index.jsp`).
@@ -41,6 +41,17 @@ Password: {TO FILL OUT}
     - Product.java: Implements the REST API for those endpoints which include products.
 
 ## RESTful Contracts
+
+Each of the products and the orders have had 5 endpoints written for them:
+
+- GET
+- GET/{id}
+- PUT
+- POST
+- DELETE
+
+The ones we actually use in Store.war are explained below.
+
 ### Endpoint: http://centaurus-13.ics.uci.edu:1025/webservices/v1/api/product/<br>
 + Method Type: GET
 + Sample Response: ```{"1008":{"image":".\/assets\/hoodie.jpg","cost":"3000","name":"Hoodie","desc":"A hoodie (also spelled hoody) is a sweatshirt or a jacket with a hood. Hoodies include a muff sewn onto the lower front, and (usually) a drawstring to adjust the hood opening."},"1":{"image":".\/assets\/shirt.jpg","cost":"2000","name":"Shirt","desc":"A T-shirt (or t shirt, or tee) is a style of unisex fabric shirt named after the T shape of its body and sleeves. Traditionally it has short sleeves and a round neckline, known as a crew neck, which lacks a collar. T-shirts are generally made of a stretchy, light and inexpensive fabric and are easy to clean. Made from 100% cotton only in our store."},"1007":{"image":".\/assets\/gloves.jpg","cost":"1000","name":"Gloves","desc":"Warm gloves.Gloves are pieces of clothing which cover your hands and wrists and have individual sections for each finger. You wear gloves to keep your hands warm or dry or to protect them."},"1006":{"image":".\/assets\/socks.jpg","cost":"500","name":"Socks","desc":"Black and white socks. A sock is an item of clothing worn on the feet and often covering the ankle or some part of the calf. Some type of shoe or boot is typically worn over socks. In ancient times, socks were made from leather or matted animal hair."},"1005":{"image":".\/assets\/shorts.jpg","cost":"1500","name":"Shorts","desc":"Shorts are a garment worn over the pelvic area, circling the waist and splitting to cover the upper part of the legs, sometimes extending down to the knees but not covering the entire length of the leg."}}```
