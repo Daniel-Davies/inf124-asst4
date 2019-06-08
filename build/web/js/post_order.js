@@ -33,7 +33,7 @@ function post_order() {
         };
         xhr.open(
             'POST',
-            'http://localhost:8080/Java-web-services/v1/api/order/'
+            ' http://centaurus-13.ics.uci.edu:1025/webservices/v1/api/order/'
         );
         xhr.send(data);
     });

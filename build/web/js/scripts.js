@@ -1,5 +1,3 @@
-const API_PREFIX = 'http://localhost:8080/Java-web-services'
-
 function addRowHandlers() {
     var table = document.getElementById("customers");
     var rows = table.getElementsByTagName("tr");

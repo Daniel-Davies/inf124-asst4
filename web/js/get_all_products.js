@@ -28,7 +28,7 @@ function getAllProducts() {
     };
     xhr.open(
             'GET', 
-            'http://localhost:8080/Java-web-services/v1/api/product');
+            'http://centaurus-13.ics.uci.edu:1025/webservices/v1/api/product');
     xhr.send();
 }
 

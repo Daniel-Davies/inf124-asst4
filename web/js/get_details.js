@@ -9,7 +9,7 @@ function renderDetails() {
     }
     xhr.open(
             'GET',
-            `http://localhost:8080/Java-web-services/v1/api/product/${pid}`
+            ` http://centaurus-13.ics.uci.edu:1025/webservices/v1/api/product/${pid}`
     );
     xhr.send();
 }
