@@ -10,6 +10,11 @@ http://centaurus-13.ics.uci.edu:1025/Store/
 User: root<br>
 Password: inf124
 
+## Repos
+
+1. Web services can be found at: https://github.com/Daniel-Davies/Java-web-services
+2. The Web Application can be found at: https://github.com/Daniel-Davies/inf124-asst4
+
 ## Meeting Requirements
 1. The index page is implemented as a JSP (in Store.war, `web/index.jsp`).
 2. A REST service has been created (i.e. webservices.war). The Contracts section exemplify how it meets the needs as required.
