@@ -1,4 +1,4 @@
-# inf124-asst4
+# inf124 Assignment 4 - RESTful Service Integration 
 Daniel Davies - daviesdg - 32285633 <br/> William Khaine - wkhaine - 34989009
 
 ## URL
